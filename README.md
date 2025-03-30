@@ -2,10 +2,9 @@
 
 ## Setup Instructions
 
-Follow the steps below to get the project running locally:
+```bash
 
 ## First is to Clone the repository
-```bash
     git clone https://github.com/franzadrian/user-management-api.git
     cd user-management-api
 
