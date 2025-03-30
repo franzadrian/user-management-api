@@ -2,21 +2,21 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn()
-  id!: number; // <-- Add "!" to tell TS it'll be initialized by TypeORM
+    @PrimaryGeneratedColumn()
+    id!: number;
 
-  @Column()
-  firstName!: string; // <-- Same here
+    @Column({ type: "varchar", unique: true, nullable: false })
+    email!: string;
 
-  @Column()
-  lastName!: string;
+    @Column({ type: "varchar", nullable: false })
+    title!: string;
 
-  @Column({ unique: true })
-  email!: string;
+    @Column({ type: "varchar", nullable: false })
+    firstName!: string;
 
-  @Column()
-  age!: number;
+    @Column({ type: "varchar", nullable: false })
+    lastName!: string;
 
-  @Column({ select: false })
-  password!: string;
+    @Column({ type: "varchar", nullable: false })
+    role!: string;
 }
